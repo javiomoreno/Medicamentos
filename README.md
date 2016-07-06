@@ -1,2 +1,0 @@
-# Medicamentos
-App de Medicamentos
