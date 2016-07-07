@@ -1,4 +1,4 @@
-package com.example.javiermoreno.medicamentos;
+package com.example.javiermoreno.medicamentos.AlarmaPakage;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.javiermoreno.medicamentos.R;
 
 import java.util.List;
 /**
@@ -38,9 +40,9 @@ public class ListaAlarmasArrayAdapter<L> extends ArrayAdapter<ListaAlarmas> {
         }
 
         //Obteniendo instancias de los elementos
-        TextView medicamento = (TextView)listItemView.findViewById(R.id.text1);
-        TextView cantidad = (TextView)listItemView.findViewById(R.id.text2);
-        TextView hora = (TextView)listItemView.findViewById(R.id.text3);
+        TextView medicamento = (TextView)listItemView.findViewById(R.id.textMedicamento);
+        TextView cantidad = (TextView)listItemView.findViewById(R.id.textCantidad);
+        TextView hora = (TextView)listItemView.findViewById(R.id.textHora);
         ImageView imagen = (ImageView)listItemView.findViewById(R.id.category);
 
 

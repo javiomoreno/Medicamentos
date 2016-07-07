@@ -1,6 +1,5 @@
 package com.example.javiermoreno.medicamentos;
 
-import android.app.ActionBar;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -10,8 +9,10 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import com.example.javiermoreno.medicamentos.AlarmaPakage.AlarmasFragment;
+import com.example.javiermoreno.medicamentos.BaseDeDatos.DBHandler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.ic_search,
             R.drawable.ic_farmacy
     };
+
+    //DBHandler dbHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
         setupTabIcons();
+
+       /* dbHandler = new DBHandler(this);
+        dbHandler.onUpgrade(dbHandler.getReadableDatabase(), 1, 2);*/
 
     }
 

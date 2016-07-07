@@ -1,4 +1,4 @@
-package com.example.javiermoreno.medicamentos;
+package com.example.javiermoreno.medicamentos.AlarmaPakage;
 
 /**
  * Created by Javier Moreno on 6 jul 2016.
@@ -20,15 +20,12 @@ public class ListaAlarmas {
     public void setMedicamento(String medicamento){
         this.medicamento = medicamento;
     }
-
     public void setCantidad(String cantidad){
         this.cantidad = cantidad;
     }
-
     public void setHora(String hora){
         this.hora = hora;
     }
-
     public void setCategoria(int imagen){
         this.imagen=imagen;
     }
