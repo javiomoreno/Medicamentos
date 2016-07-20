@@ -1,4 +1,4 @@
-
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,14 +11,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.javiermoreno.medicamentos.AlarmaPakage.NuevaAlarma">
 
-        <!-- Login progress -->
-        <ProgressBar
-            android:id="@+id/login_progress"
-            style="?android:attr/progressBarStyleLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:visibility="gone" />
 
         <ScrollView
             android:id="@+id/login_form"
@@ -41,68 +33,149 @@
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="40dp" />
 
-                        <android.support.design.widget.TextInputLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                                <AutoCompleteTextView
-                                    android:id="@+id/editTextMedicamento"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:hint="@string/medicamento"
-                                    android:inputType="text"
-                                    android:maxLines="1"
-                                    android:singleLine="true" />
-
-                        </android.support.design.widget.TextInputLayout>
-
-                        <android.support.design.widget.TextInputLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                                <AutoCompleteTextView
-                                    android:id="@+id/editTextCantidad"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:hint="@string/cantidad"
-                                    android:inputType="text"
-                                    android:maxLines="1"
-                                    android:singleLine="true" />
-
-                        </android.support.design.widget.TextInputLayout>
-
-                        <android.support.design.widget.TextInputLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                                <AutoCompleteTextView
-                                    android:id="@+id/editTextHora"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:hint="@string/hora"
-                                    android:inputType="number"
-                                    android:maxLines="1"
-                                    android:singleLine="true" />
-
-                                <Spinner
-                                    android:id="@+id/planets_spinner"
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    />
-
-                        </android.support.design.widget.TextInputLayout>
-
-
-
-                        <Button
-                            android:id="@+id/email_sign_in_button"
-                            style="?android:textAppearanceSmall"
+                        <LinearLayout
+                            android:id="@+id/area_medicamento"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:onClick="onClickGuardarAlarma"
-                            android:text="@string/guardar_nueva_alarma"
-                            android:textStyle="bold" />
+                            android:orientation="horizontal">
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp">
+
+                                        <AutoCompleteTextView
+                                            android:id="@+id/editTextMedicamento"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:hint="@string/medicamento"
+                                            android:inputType="text"
+                                            android:maxLines="1"
+                                            android:singleLine="true" />
+
+                                </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/area_cantidad"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="left">
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:id="@+id/til_cantidad"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp">
+
+                                        <EditText
+                                            android:id="@+id/editTextCantidad"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:ems="9"
+                                            android:hint="@string/cantidad"
+                                            android:inputType="number" />
+                                </android.support.design.widget.TextInputLayout>
+
+                                <Spinner
+                                    android:id="@+id/cantidades_spinner"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="10dp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/area_hora"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:id="@+id/til_hora"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp">
+
+                                        <EditText
+                                            android:id="@+id/editTextHora"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:ems="9"
+                                            android:hint="@string/hora"
+                                            android:inputType="number" />
+                                </android.support.design.widget.TextInputLayout>
+
+                                <Spinner
+                                    android:id="@+id/horas_spinner"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="10dp"/>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/area_tiempo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:id="@+id/til_tiempo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp">
+
+                                        <EditText
+                                            android:id="@+id/editTextTiempo"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:ems="9"
+                                            android:hint="@string/tiempos"
+                                            android:inputType="number" />
+                                </android.support.design.widget.TextInputLayout>
+
+                                <Spinner
+                                    android:id="@+id/tiempo_spinner"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="10dp"/>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/bottom_bar"
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="30dp"
+                            android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/boton_cancelar"
+                                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Cancelar" />
+
+                                <Button
+                                    android:id="@+id/boton_aceptar"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:backgroundTint="@color/colorPrimary"
+                                    android:text="Guardar"
+                                    android:onClick="onClickGuardarAlarma"
+                                    android:textColor="@android:color/white" />
+                        </LinearLayout>
+
 
                 </LinearLayout>
         </ScrollView>

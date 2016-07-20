@@ -1,4 +1,4 @@
-package com.example.javiermoreno.medicamentos;
+package com.example.javiermoreno.medicamentos.Fragments;
 
 
 import android.os.Bundle;
@@ -7,14 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.javiermoreno.medicamentos.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FarmaciasFragment extends Fragment {
+public class BuscarFragment extends Fragment {
 
 
-    public FarmaciasFragment() {
+    public BuscarFragment() {
         // Required empty public constructor
     }
 

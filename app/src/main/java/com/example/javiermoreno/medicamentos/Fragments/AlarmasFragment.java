@@ -1,4 +1,4 @@
-package com.example.javiermoreno.medicamentos.AlarmaPakage;
+package com.example.javiermoreno.medicamentos.Fragments;
 
 
 import android.content.Intent;
@@ -13,6 +13,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 
+import com.example.javiermoreno.medicamentos.AlarmaPakage.ListaAlarmas;
+import com.example.javiermoreno.medicamentos.AlarmaPakage.ListaAlarmasArrayAdapter;
+import com.example.javiermoreno.medicamentos.AlarmaPakage.NuevaAlarma;
 import com.example.javiermoreno.medicamentos.BaseDeDatos.Alarmas;
 import com.example.javiermoreno.medicamentos.BaseDeDatos.DBHandler;
 import com.example.javiermoreno.medicamentos.MainActivity;
@@ -49,8 +52,10 @@ public class AlarmasFragment extends Fragment {
         dataBase = new DBHandler(viewGlobal.getContext());
         listaDataBase = dataBase.getAllAlarmas();
 
-        for (Alarmas alarma : listaDataBase) {
-            LISTA.add(new ListaAlarmas(alarma.getMedicamento(), alarma.getCantidad(), alarma.getHora(), R.mipmap.ic_alarm));
+        if (LISTA.isEmpty()) {
+            for (Alarmas alarma : listaDataBase) {
+                LISTA.add(new ListaAlarmas(alarma.getMedicamento(), alarma.getCantidad(), alarma.getHora(), R.mipmap.ic_alarm));
+            }
         }
 
         adaptador = new ListaAlarmasArrayAdapter<ListaAlarmas>(

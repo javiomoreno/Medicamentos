@@ -12,7 +12,8 @@
     <string name="medicamento">Medicamento</string>
     <string name="guardar_nueva_alarma">Guardar</string>
     <string name="cantidad">Cantidad</string>
-    <string name="hora">Hora</string>
+    <string name="hora">Cada</string>
 
     <string name="error_field_required">Este Campo es Obligatorio</string>
+    <string name="tiempos">Por</string>
 </resources>

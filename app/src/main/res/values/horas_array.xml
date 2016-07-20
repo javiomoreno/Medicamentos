@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="lista_array">
+    <string-array name="horas_array">
+        <item>Seleccione</item>
         <item>Horas</item>
         <item>Minutos</item>
     </string-array>

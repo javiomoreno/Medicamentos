@@ -11,11 +11,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.widget.TextView;
 
-import com.example.javiermoreno.medicamentos.AlarmaPakage.AlarmasFragment;
 import com.example.javiermoreno.medicamentos.BaseDeDatos.DBHandler;
+import com.example.javiermoreno.medicamentos.Fragments.AlarmasFragment;
+import com.example.javiermoreno.medicamentos.Fragments.BuscarFragment;
+import com.example.javiermoreno.medicamentos.Fragments.FarmaciasFragment;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -47,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
         setupTabIcons();
 
-       /* dbHandler = new DBHandler(this);
+        /*dbHandler = new DBHandler(this);
         dbHandler.onUpgrade(dbHandler.getReadableDatabase(), 1, 2);*/
 
     }
@@ -56,16 +59,19 @@ public class MainActivity extends AppCompatActivity {
 
         TextView tabOne = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
         tabOne.setText("ALARMAS");
+        tabOne.setTextColor(getResources().getColor(R.color.colorTabs));
         tabOne.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_alarm, 0, 0);
         tabLayout.getTabAt(0).setCustomView(tabOne);
 
         TextView tabTwo = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
         tabTwo.setText("BUSCAR");
+        tabTwo.setTextColor(getResources().getColor(R.color.colorTabs));
         tabTwo.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_search, 0, 0);
         tabLayout.getTabAt(1).setCustomView(tabTwo);
 
         TextView tabThree = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
         tabThree.setText("FARMACIAS");
+        tabThree.setTextColor(getResources().getColor(R.color.colorTabs));
         tabThree.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_farmacy, 0, 0);
         tabLayout.getTabAt(2).setCustomView(tabThree);
     }
